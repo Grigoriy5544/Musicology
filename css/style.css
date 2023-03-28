@@ -1,57 +1,94 @@
 .container {
-    height: 100%;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 100px;
+	height: 100%;
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 100px;
 }
 
 .title {
-    display: inline-block;
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    font-size: 124px;
-    margin: 0;
+	display: inline-block;
+	color: #ffffff;
+	font-family: 'Oswald', sans-serif;
+	font-size: 124px;
+	margin: 0;
+}
+
+.description {
+	display: inline-block;
+	color: #ffffff;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	line-height: 1.2;
+}
+
+.btn-primary {
+	display: inline;
+	width: 322px;
+	height: 65px;
+	text-align: center;
+	background: #303030;
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	border: none;
 }
 
 /* Header */
 
 .header {
-    background: #303030;
-    height: 100px;
-    padding: 23px 0;
+	background: #303030;
+	height: 100px;
+	padding: 23px 0;
 }
 
 .header .container {
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .header__list {
-    display: flex;
-    gap: 55px;
+	display: flex;
+	gap: 55px;
 }
 
 .header__list-item {
-    list-style: none;
-    font-family: 'Oswald', sans-serif;
-    font-size: 25px;
-    font-weight: 400;
+	list-style: none;
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
 }
 
 .header__list-item > a {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 /* Section Hero */
 
 .hero {
-    height: 700px;
-    background: url("/img/section-hero-bg.jpg") no-repeat;
-    background-size: cover;
-    background-position-y: -100px;
+	height: 700px;
+	background: url('/img/section-hero-bg.jpg') no-repeat;
+	background-size: cover;
+	background-position-y: -100px;
+	padding-bottom: 80px;
+}
+
+.hero .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.hero .description {
+	margin-top: 40px;
+	margin-bottom: 50px;
+	max-width: 50%;
+}
+
+.hero .btn-primary {
+	background-color: #e8631c;
+	cursor: pointer;
+	color: #ffffff;
 }
