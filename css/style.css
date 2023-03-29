@@ -3,6 +3,7 @@
 	--grey: #303030;
 	--font-size-title: 124px;
 	--font-size-description: 30px;
+	--font-size-h2: 75px;
 }
 
 .container {
@@ -31,7 +32,6 @@
 }
 
 .btn-primary {
-	display: inline;
 	width: 322px;
 	height: 65px;
 	text-align: center;
@@ -130,7 +130,7 @@
 	padding-top: 90px;
 	margin-bottom: 63px;
 	text-align: center;
-	font-size: 75px;
+	font-size: var(--font-size-h2);
 	position: relative;
 	z-index: 1;
 }
@@ -170,12 +170,24 @@
 	padding-bottom: 23px;
 }
 
+/* Section Pricing */
+
+.pricing {
+	background-color: var(--grey);
+	height: auto;
+}
+
+.pricing .container .title {
+	font-size: var(--font-size-h2);
+	padding-bottom: 20px;
+}
+
 /* Adaptive */
 
 @media screen and (max-width: 1280px) {
 	:root {
 		--font-size-title: 90px;
-		--font-size-description: 25px;
+		--font-size-description: 35px;
 	}
 
 	.container {
@@ -190,8 +202,9 @@
 
 @media screen and (max-width: 1024px) {
 	:root {
-		--font-size-title: 70px;
-		--font-size-description: 22px;
+		--font-size-title: 80px;
+		--font-size-description: 25px;
+		--font-size-h2: 50px;
 	}
 
 	.container {
@@ -202,14 +215,10 @@
 		display: none;
 	}
 	.header-logo {
-		height: 80%;
+		height: 40px;
 	}
 	.burger-lines {
 		display: block;
-	}
-
-	.dance-tour .container .title {
-		font-size: var(--font-size-title);
 	}
 
 	.dance-tour .container > .description {
@@ -217,17 +226,11 @@
 		margin: 0 auto;
 		text-align: center;
 	}
-
-	.card .title,
-	.card .description {
-		font-size: 15px;
-		padding: 0;
-	}
 }
 
 @media screen and (max-width: 768px) {
 	:root {
-		--font-size-title: 60px;
+		--font-size-title: 70px;
 		--font-size-description: 20px;
 	}
 
@@ -240,13 +243,12 @@
 	}
 
 	.hero .title {
-		max-width: 80%;
 		margin: 0px auto;
 	}
 
 	.hero .description {
 		display: inline-block;
-		max-width: 80%;
+		max-width: 100%;
 		margin: 50px auto;
 		text-align: center;
 	}
@@ -255,9 +257,19 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
 
-	.card .title,
-	.card .description {
-		font-size: 15px;
+@media screen and (max-width: 568px) {
+	:root {
+		--font-size-title: 60px;
+		--font-size-description: 18px;
+	}
+
+	.container {
+		max-width: 468px;
+	}
+
+	.btn-primary {
+		width: 225px;
 	}
 }
