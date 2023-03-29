@@ -1,16 +1,23 @@
+:root {
+	--orange: #e8631c;
+	--grey: #303030;
+	--font-size-title: 124px;
+	--font-size-description: 30px;
+}
+
 .container {
 	height: 100%;
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 0 100px;
+	padding: 0 50px;
 }
 
 .title {
 	display: inline-block;
 	color: #ffffff;
 	font-family: 'Oswald', sans-serif;
-	font-size: 124px;
+	font-size: var(--font-size-title);
 	margin: 0;
 }
 
@@ -19,7 +26,7 @@
 	color: #ffffff;
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 30px;
+	font-size: var(--font-size-description);
 	line-height: 1.2;
 }
 
@@ -28,18 +35,21 @@
 	width: 322px;
 	height: 65px;
 	text-align: center;
-	background: #303030;
+	background: var(--grey);
 	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
 	font-size: 30px;
 	border: none;
+	outline: none;
 }
 
 /* Header */
 
 .header {
-	background: #303030;
+	background: var(--grey);
 	height: 100px;
 	padding: 23px 0;
+	overflow: hidden;
 }
 
 .header .container {
@@ -52,12 +62,16 @@
 .header__list {
 	display: flex;
 	gap: 55px;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	list-style: none;
+	font-size: 25px;
+	font-weight: 400;
 }
 
-.header__list-item {
-	list-style: none;
-	font-family: 'Oswald', sans-serif;
-	font-size: 25px;
+.menu__wrapper {
+	display: flex;
+	gap: 15px;
 }
 
 .header__list-item > a {
@@ -69,26 +83,181 @@
 
 .hero {
 	height: 700px;
-	background: url('/img/section-hero-bg.jpg') no-repeat;
-	background-size: cover;
-	background-position-y: -100px;
-	padding-bottom: 80px;
+	background: url('/img/section-hero-bg.jpg') no-repeat center center/cover;
 }
 
 .hero .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
+	padding-bottom: 80px;
 }
 
 .hero .description {
 	margin-top: 40px;
 	margin-bottom: 50px;
-	max-width: 50%;
+	max-width: 60%;
 }
 
 .hero .btn-primary {
-	background-color: #e8631c;
+	background-color: var(--orange);
 	cursor: pointer;
 	color: #ffffff;
+}
+
+/* Section Dance-Tour */
+
+.dance-tour {
+	overflow: hidden;
+	height: auto;
+	background: var(--orange);
+	position: relative;
+}
+
+.dance-tour::before {
+	content: '';
+	height: 100%;
+	width: 100%;
+	top: -500px;
+	left: -500px;
+	background: url('/img/Shape.png') no-repeat;
+	position: absolute;
+	rotate: 10deg;
+}
+
+.dance-tour .container > .title {
+	display: block;
+	padding-top: 90px;
+	margin-bottom: 63px;
+	text-align: center;
+	font-size: 75px;
+	position: relative;
+	z-index: 1;
+}
+
+.dance-tour .container > .description {
+	max-width: 860px;
+	display: block;
+	margin: 0 auto;
+}
+
+.cards {
+	position: relative;
+	margin-top: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 25px;
+	z-index: 3;
+	padding-bottom: 25px;
+}
+
+.card {
+	background: var(--grey);
+	height: 497px;
+	width: 372px;
+	text-align: center;
+}
+
+.card .title {
+	padding-top: 40px;
+	font-size: 36px;
+	margin-bottom: 15px;
+}
+
+.card .description {
+	font-size: 22px;
+	padding-bottom: 23px;
+}
+
+/* Adaptive */
+
+@media screen and (max-width: 1280px) {
+	:root {
+		--font-size-title: 90px;
+		--font-size-description: 25px;
+	}
+
+	.container {
+		max-width: 1180px;
+	}
+
+	.cards {
+		align-items: center;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	:root {
+		--font-size-title: 70px;
+		--font-size-description: 22px;
+	}
+
+	.container {
+		max-width: 924px;
+	}
+
+	.header__list {
+		display: none;
+	}
+	.header-logo {
+		height: 80%;
+	}
+	.burger-lines {
+		display: block;
+	}
+
+	.dance-tour .container .title {
+		font-size: var(--font-size-title);
+	}
+
+	.dance-tour .container > .description {
+		max-width: 90%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.card .title,
+	.card .description {
+		font-size: 15px;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		--font-size-title: 60px;
+		--font-size-description: 20px;
+	}
+
+	.container {
+		max-width: 668px;
+	}
+
+	.hero .container {
+		justify-content: center;
+	}
+
+	.hero .title {
+		max-width: 80%;
+		margin: 0px auto;
+	}
+
+	.hero .description {
+		display: inline-block;
+		max-width: 80%;
+		margin: 50px auto;
+		text-align: center;
+	}
+
+	.hero .btn-primary {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.card .title,
+	.card .description {
+		font-size: 15px;
+	}
 }
