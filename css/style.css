@@ -333,19 +333,6 @@
         align-items: center;
         flex-direction: column;
     }
-
-    .card {
-        width: 100%;
-    }
-
-    .card img {
-        width: 100%;
-        height: auto;
-    }
-
-    .pricing__card-icon {
-        width: 112px !important;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -421,5 +408,22 @@
 
     .btn-primary {
         width: 225px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card .title, .card .description {
+        padding: 0;
+    }
+
+    .pricing__card-icon {
+        width: 112px !important;
     }
 }
