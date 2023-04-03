@@ -1,3 +1,7 @@
+* {
+	scroll-behavior: Instant;
+}
+
 :root {
 	--orange: #e8631c;
 	--grey: #303030;
